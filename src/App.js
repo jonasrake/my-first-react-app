@@ -4,20 +4,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p><h1>This is a line of HTML with an "h1" tag on my first react application</h1></p>
+      <p><h2>This is a line of HTML with an "h2" tag on my first react application</h2></p>
+      <p><h3>This is a line of HTML with an "h3" tag on my first react application</h3></p>
+      <p><h4>This is a line of HTML with an "h4" tag on my first react application</h4></p>
+      <p>This is a line of HTML with no header tag on my first react application</p>
     </div>
   );
 }
