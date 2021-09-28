@@ -1,10 +1,7 @@
-export default function button(){
-
-
-return(
-
+export default function button() {
+  return (
     <div>
-        "click me"
+      <button>"click me"</button>
     </div>
-)
+  );
 }

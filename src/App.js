@@ -1,16 +1,61 @@
-import Button from "./components/Button"
-import './App.css';
+// src/App.js
+import "./App.css";
+
+import Title from "./components/Title";
+import Pokemon from "./components/Pokemons";
+
+const all_pokemon = [
+  {
+    name: "Charizard",
+    weight: 90,
+    awesome: true,
+    terrifying: false,
+    abilities: ["Blaze", "Solar power", "Tough claws", "Drought"],
+  },
+  {
+    name: "Bulbasaur",
+    weight: 6.9,
+    awesome: true,
+    terrifying: false,
+    abilities: ["Overgrow", "Chlorophyll"],
+  },
+  {
+    name: "Mewtwo",
+    weight: 122,
+    awesome: true,
+    terrifying: true,
+    abilities: ["Pressure", "Unnerve", "Steadfast", "Insomnia"],
+  },
+  {
+    name: "Mega beedrill",
+    weight: 65,
+    awesome: false,
+    terrifying: true,
+    abilities: ["Intimidate", "Unnerve"],
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <h1>This is a line of HTML with an "h1" tag on my first react application</h1>
-      <h2>This is a line of HTML with an "h2" tag on my first react application</h2>
-      <h3>This is a line of HTML with an "h3" tag on my first react application</h3>
-      <h4>This is a line of HTML with an "h4" tag on my first react application</h4>
-      <p>This is a line of HTML with no header tag on my first react application</p>
-      <Button/>
-      <button>click me</button>
+      <main className="container my-5">
+        {" "}
+        <Title className="mb4" content="Some simple title" />
+        <div className="row">
+          {all_pokemon.map((pokemon, index) => (
+            <div key={index} className="col-md-6 col-lg-4">
+              <Pokemon
+                key={index}
+                name={pokemon.name}
+                weight={pokemon.weight}
+                awesome={pokemon.awesome}
+                terrifying={pokemon.terrifying}
+                abilities={pokemon.abilities}
+              />
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }
